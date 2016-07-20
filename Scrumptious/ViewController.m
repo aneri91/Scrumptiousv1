@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GuestLoginViewController.h"
+#import "HomeViewController.h"
 
 @interface ViewController ()
 
@@ -18,6 +20,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+-(IBAction)btnAddToCart:(id)sender
+{
+    HomeViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeView"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+-(IBAction)btnToProvious:(id)sender
+{
+    [[self navigationController]popViewControllerAnimated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
